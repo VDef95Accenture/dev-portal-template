@@ -1,0 +1,32 @@
+# THIS WORKFLOW USES AZURE STATIC WEB APPS
+# This is based off the default template for SWA workflow
+# Do not include triggers
+# Static Web App service automatically bases release off build pipeline, since that results in HTML files
+
+name: $(TeamProject)_$(Build.DefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
+
+trigger: none
+
+jobs:
+- job: build_and_deploy_job
+  displayName: Build and Deploy
+  condition: or(eq(variables['Build.Reason'], 'Manual'),or(eq(variables['Build.Reason'], 'PullRequest'),eq(variables['Build.Reason'], 'IndividualCI')))
+  pool:
+    vmImage: ubuntu-latest
+  variables:
+  - group: Azure-Static-Web-Apps-gentle-sand-03e68ee0f-variable-group
+  steps:
+  - checkout: self
+    submodules: true
+    displayName: 'Checking out code'
+  - task: AzureStaticWebApp@0
+    displayName: 'Build and deploy to Azure SWA service'
+    inputs:
+      azure_static_web_apps_api_token: $(AZURE_STATIC_WEB_APPS_API_TOKEN_GENTLE_SAND_03E68EE0F)
+      
+###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
+# For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
+      app_location: "/" # App source code path
+      api_location: "" # Api source code path - optional
+      output_location: "build" # Built app content directory - optional
+###### End of Repository/Build Configurations ######

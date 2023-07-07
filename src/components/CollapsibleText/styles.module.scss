@@ -1,0 +1,97 @@
+@import '../../styles/colors.scss';
+
+.collapsibleTextContainer {
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    border: 1px solid $secondary-blue-grey-light;
+    background-color: var(--ifm-card-background-color);
+    box-shadow: 0px 4px 4px $shadow-medium;
+    margin-bottom: 25px;
+
+    &:hover {
+        box-shadow: 0 4px 4px 0 $shadow-medium;
+      }
+}
+
+.summaryContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 25px 30px 0px 30px;
+    cursor: pointer;
+
+    .summary {
+        font-size: 18px;
+        font-weight: 600;
+        color: $primary-black;
+        width: 90%;
+    }
+    
+    .iconContainer{
+        display: flex;
+        justify-content: flex-end;
+        width: 10%;
+    }
+
+    .shownIcon {
+        display: flex;
+
+        svg {
+            transform: rotate(90deg);
+        }
+    }
+
+    .hiddenIcon {
+        display: flex;
+    }
+}
+
+.hiddenContent {
+    max-height: 1px;
+    padding: 10px 30px 15px 30px;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease-out, visibility 0.5s ease-out, opacity 0.5s ease-out;
+    visibility: hidden;
+}
+
+.shownContent {
+    max-height: 500px;
+    padding: 10px 30px 15px 30px;
+    overflow: hidden;
+    opacity: 1;
+    visibility: visible;
+    transition: max-height 0.5s ease-in, visibility 0.5s ease-in, opacity 0.5s ease-in;
+    color: $primary-black;
+}
+
+[data-theme='dark'] {
+    .collapsibleTextContainer {
+        color: $primary-white;
+        box-shadow: 0px 4px 4px $shadow-medium-white;
+
+        &:hover {
+            box-shadow: 0 4px 4px 0 $shadow-medium-white;
+          }
+    }
+    
+    .summaryContainer {
+        .summary {
+            font-size: 18px;
+            font-weight: 600;
+            color: $primary-white;
+            width: 90%;
+        }
+
+        .iconContainer{
+            svg {
+                color: $primary-white;
+            }
+        }
+    }
+
+    .shownContent {
+        color: $primary-white;
+    }
+}
+  

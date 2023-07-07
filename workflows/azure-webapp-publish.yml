@@ -1,0 +1,46 @@
+# THIS WORKFLOW PUBLISHES A FOLDER CONTAINING HTML FILES
+# Workflow is contained in a single stage
+
+name: $(TeamProject)_$(Build.DefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+- stage: setup
+  displayName: 'Build and Publish'
+  jobs:
+  - job: build
+    displayName: 'Application Build'
+    steps:
+    - task: NodeTool@0
+      displayName: 'Install Node.js'
+      inputs:
+        versionSpec: '19.x'
+    - script: |
+        npm install
+      displayName: 'Install NPM dependencies'
+    - script: |
+        npm run build
+      displayName: 'Build via Docusaurus'
+    - task: CopyFiles@2
+      displayName: 'Copy build files to staging'
+      inputs:
+        SourceFolder: 'build'
+        Contents: '**'
+        TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    - task: CopyFiles@2
+      displayName: 'Copy config to staging'
+      inputs:
+        SourceFolder: '$(Build.SourcesDirectory)'
+        Contents: 'staticwebapp.config.json'
+        TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish'
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        ArtifactName: 'dist'
+        publishLocation: 'Container'  

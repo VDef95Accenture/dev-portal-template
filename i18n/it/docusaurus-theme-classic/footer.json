@@ -1,0 +1,46 @@
+{
+  "link.title.Resources": {
+    "message": "Risorse",
+    "description": "The title of the footer links column with title=Resources in the footer"
+  },
+  "link.title.Community": {
+    "message": "Communità",
+    "description": "The title of the footer links column with title=Community in the footer"
+  },
+  "link.title.Support": {
+    "message": "Supporto",
+    "description": "The title of the footer links column with title=Support in the footer"
+  },
+  "link.item.label.Company Information": {
+    "message": "Informazioni sulla società",
+    "description": "The label of footer link with label=Company Information linking to https://www.cnhindustrial.com/"
+  },
+  "link.item.label.Product Documents": {
+    "message": "Documenti del prodotto",
+    "description": "The label of footer link with label=Product Documents linking to https://www.cnhindustrial.com/"
+  },
+  "link.item.label.Twitter": {
+    "message": "Twitter",
+    "description": "The label of footer link with label=Twitter linking to https://twitter.com/"
+  },
+  "link.item.label.LinkedIn": {
+    "message": "LinkedIn",
+    "description": "The label of footer link with label=LinkedIn linking to https://www.linkedin.com/"
+  },
+  "link.item.label.Youtube": {
+    "message": "Youtube",
+    "description": "The label of footer link with label=Youtube linking to https://www.youtube.com/"
+  },
+  "link.item.label.Facebook": {
+    "message": "Facebook",
+    "description": "The label of footer link with label=Facebook linking to https://www.facebook.com/"
+  },
+  "link.item.label.Frequently Asked Questions": {
+    "message": "Domande Frequenti",
+    "description": "The label of footer link with label=Frequently Asked Questions linking to /troubleshooting/common-questions/overview"
+  },
+  "copyright": {
+    "message": "© 2023 CNH Industrial N.V. Tutti i diritti riservati.",
+    "description": "The footer copyright"
+  }
+}

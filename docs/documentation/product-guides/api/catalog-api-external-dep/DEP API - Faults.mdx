@@ -1,0 +1,30 @@
+---
+tags:
+  - DEP API - Faults
+  - Catalog api's external dep
+---
+
+##	Overview
+
+Faults API exposes faults data to the DMS providers, which enables them to have all the information about the equipment required while creating the work order in DMS. A DMS provider can query the active fault and/or the historical (30 days) fault data on a real time basis by providing the Vehicle Identification Number (VIN) and/or start and end dates in the API request parameter. The API provides information about geographical information of the equipment and the various faults occurred between the requested dates as a response.  If the request does not contain the date range, by default the faults of last 24 hours will be shared. All the faults and its relevant data are extracted from the Geo Spatial System (GSS) of CNHi.
+Pictorial representation of the data flows below.
+
+![image.png](/img/mdx_image/faults/image-d1c1a79c-a0c4-4f06-99c9-c2b74201874d.png)
+ 
+## 	Pre-requisites to access the API
+
+•	To request for the fault details, the dealer should be registered and possess a user ID from CNHi dealer portal. 
+•	No Additional configuration or access required for the GSS system of CNHi.
+•	All the API setups require a basic http authorization header, which will require an API Subscription key
+
+## 	API setup
+
+CNHi’ s has built a data exchange platform, which provides the flexibility to the end users to request information from CNHi system in the following format. 
+1.	REST API  
+CNHi’ s data exchange platform will take care of the format transformations (as needed) to process the request and provide a response to the DMS system.
+DMS providers who already have the connection established to the CNHi’ s GSS system can continue to use their REST API format. All such DMS providers are required to change the request end point URL alone in their systems (details in connection details section). The response format from the CNHi system will remain unchanged.
+
+
+Attached Document
+
+[DEP- API Setup Reference Guide -Faults V1.3.docx](/mdx_attachments/faults/DEP-%20API%20Setup%20Reference%20Guide%20-Faults%20V1.3-b27c0e92-42b9-476d-bcf1-aab2dd3bce36.docx)

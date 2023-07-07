@@ -1,0 +1,45 @@
+# We're using Node.js 16 because your project requires at least Node.js 16.14
+#FROM node:16
+
+# Set a working directory
+#WORKDIR /usr/src/app
+
+# Copy package.json and package-lock.json (if available)
+#COPY package*.json ./
+
+# Install dependencies
+#RUN npm install
+
+# Copy the rest of your app's source code
+#COPY . .
+
+# Build the app
+#RUN npm run build
+
+# Expose the port Docusaurus will be served on
+#EXPOSE 3000
+
+# Serve the built app
+#CMD [ "npm", "run", "serve" ]
+###################ààà
+FROM node:18.16 as build
+
+WORKDIR /usr/src/app
+
+COPY . .
+
+RUN npm install
+RUN npm run build
+
+
+FROM nginx:1.25
+WORKDIR /usr/share/nginx/html
+
+RUN rm -rf /usr/share/nginx/html/*
+
+COPY --from=build /usr/src/app/build /usr/share/nginx/html
+
+
+EXPOSE 8080
+
+CMD ["nginx", "-g", "daemon off;"]

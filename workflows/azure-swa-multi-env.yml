@@ -1,0 +1,99 @@
+# THIS WORKFLOW USES AZURE STATIC WEB APPS
+# Workflow is broken down into multiple stages for support of multiple Azure internal environments
+# Do not include triggers, since Static Web App service automatically bases release off build pipeline
+
+name: $(TeamProject)_$(Build.DefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
+
+trigger: none
+
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+- stage: build
+  displayName: 'Build Application'
+  jobs:
+  - job: build
+    displayName: 'Building application'
+    steps:
+    - task: NodeTool@0
+      displayName: 'Install Node.js'
+      inputs:
+        versionSpec: '19.x'
+    - script: |
+        npm install
+        npm run build
+      displayName: 'Install dependencies and build'
+    - task: CopyFiles@2
+      displayName: 'Copy files for staging'
+      inputs:
+        SourceFolder: 'build'
+        Contents: '**'
+        TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish files'
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        ArtifactName: 'dist'
+        publishLocation: 'Container'
+- stage: deploy_staging
+  displayName: 'Deploy to Staging'
+  jobs:
+  - deployment: deploy
+    displayName: 'Deploying to Staging environment'
+    environment: 'CNHI-docs-staging'
+    variables:
+    - group: Azure-Static-Web-Apps-gentle-sand-03e68ee0f-variable-group
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - download: none
+          - checkout: none
+          - task: DownloadBuildArtifacts@1
+            displayName: 'Download artifacts'
+            inputs:
+              buildType: current
+              downloadType: single
+              artifactName: 'dist'
+              downloadPath: '$(System.ArtifactsDirectory)'
+          - task: AzureStaticWebApp@0
+            displayName: 'Deploy via SWA'
+            inputs:
+              azure_static_web_apps_api_token: $(AZURE_STATIC_WEB_APPS_API_TOKEN_GENTLE_SAND_03E68EE0F)
+              workingDirectory: '$(System.ArtifactsDirectory)/dist'
+              verbose: true
+              skip_app_build: true
+              app_location: "/"
+              api_location: ""
+              deployment_environment: staging
+- stage: deploy_production
+  displayName: 'Deploy to Production'
+  jobs:
+  - deployment: deploy
+    displayName: 'Deploying to Production environment'
+    environment: 'CNHI-docs-production'
+    variables:
+    - group: Azure-Static-Web-Apps-gentle-sand-03e68ee0f-variable-group
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - download: none
+          - checkout: none
+          - task: DownloadBuildArtifacts@1
+            displayName: 'Download artifacts'
+            inputs:
+              buildType: current
+              downloadType: single
+              artifactName: 'dist'
+              downloadPath: '$(System.ArtifactsDirectory)'
+          - task: AzureStaticWebApp@0
+            displayName: 'Deploy via SWA'
+            inputs:
+              azure_static_web_apps_api_token: $(AZURE_STATIC_WEB_APPS_API_TOKEN_GENTLE_SAND_03E68EE0F)
+              workingDirectory: '$(System.ArtifactsDirectory)/dist'
+              verbose: true
+              skip_app_build: true
+              app_location: "/"
+              api_location: ""

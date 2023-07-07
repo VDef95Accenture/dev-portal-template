@@ -1,0 +1,16 @@
+.columnList {
+    max-width: 40%;
+    flex-grow: 1;
+    margin: 0px 25px;
+
+    .columnItem {
+        display: flex;
+        flex-direction: row;
+
+        .iconContainer {
+            margin-right: 5px;
+            display: flex;
+            align-items: center;
+        }
+    }
+}

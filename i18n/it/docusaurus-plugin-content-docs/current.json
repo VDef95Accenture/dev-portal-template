@@ -1,0 +1,62 @@
+{
+  "version.label": {
+    "message": "Prossimo",
+    "description": "The label for version current"
+  },
+  "sidebar.documentationSidebar.category.Getting Started": {
+    "message": "Per Iniziare",
+    "description": "The label for category Getting Started in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Product Guides": {
+    "message": "Guide al Prodotto",
+    "description": "The label for category Product Guides in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Catalog API'S External DEP": {
+    "message": "Catalogo API'S DEP Esterno",
+    "description": "The label for category Catalog API'S External DEP in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.doc.Introduction": {
+    "message": "Introduzione",
+    "description": "The label for the doc item Introduction in sidebar documentationSidebar, linking to the doc documentation/introduction"
+  },
+  "sidebar.documentationSidebar.doc.Common Terms": {
+    "message": "Termini frequenti",
+    "description": "The label for the doc item Common Terms in sidebar documentationSidebar, linking to the doc documentation/Common Terms"
+  },
+  "sidebar.documentationSidebar.doc.Page one": {
+    "message": "Pagina uno",
+    "description": "The label for the doc item page one in sidebar documentationSidebar, linking to the doc documentation/getting-started/two"
+  },
+  "sidebar.documentationSidebar.doc.Page two": {
+    "message": "Pagina due",
+    "description": "The label for the doc item page two in sidebar documentationSidebar, linking to the doc documentation/getting-started/two"
+  },
+  "sidebar.documentationSidebar.doc.DEP API - Work Order": {
+    "message": "DEP API - Ordine di lavoro",
+    "description": "The label for the doc item DEP API - Work Order in sidebar documentationSidebar, linking to the doc documentation/product-guides/api/catalog-api-external-dep/DEP API - Work Order"
+  },
+  "sidebar.documentationSidebar.doc.DEP API - SRT": {
+    "message": "DEP API - SRT",
+    "description": "The label for the doc item DEP API - SRT in sidebar documentationSidebar, linking to the doc documentation/product-guides/api/catalog-api-external-dep/DEP API - SRT"
+  },
+  "sidebar.documentationSidebar.doc.DEP API - Faults": {
+    "message": "DEP API - Difetti",
+    "description": "The label for the doc item DEP API - Faults in sidebar documentationSidebar, linking to the doc documentation/product-guides/api/catalog-api-external-dep/DEP API - Faults"
+  },
+  "sidebar.documentationSidebar.doc.DEP API - eWarranty": {
+    "message": "DEP API - eGaranzia",
+    "description": "The label for the doc item DEP API - eWarranty in sidebar documentationSidebar, linking to the doc documentation/product-guides/api/catalog-api-external-dep/DEP API - eWarranty"
+  },
+  "sidebar.documentationSidebar.doc.DEP External API - General Telemetry": {
+    "message": "DEP External API - Telemetria generale",
+    "description": "The label for the doc item DEP External API - General Telemetry in sidebar documentationSidebar, linking to the doc documentation/product-guides/api/catalog-api-external-dep/DEP External API - General Telemetry"
+  },
+  "sidebar.troubleshootingSidebar.doc.Introduction": {
+    "message": "Introduzione",
+    "description": "The label for the doc item Introduction in sidebar troubleshootingSidebar, linking to the doc troubleshooting/introduction"
+  },
+  "sidebar.troubleshootingSidebar.doc.Common Questions": {
+    "message": "Domande frequenti",
+    "description": "The label for the doc item Common Questions in sidebar troubleshootingSidebar, linking to the doc troubleshooting/common-questions/overview"
+  }
+}

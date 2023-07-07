@@ -1,0 +1,20 @@
+---
+tags:
+  - DEP API - General Telemetry
+  - Catalog api's external dep
+---
+
+## 	Overview
+Telemetry API intends to provide the parameter information of the different parts of an equipment, which are collected from the modem real time like AM53, PCM etc., which enables the DMS users to understand the part parameters before or while creating the work order in DMS. 
+A DMS provider can query for telemetry information in the following methods. 
+1.	For a given equipment for one day.  
+2.	For a given equipment at a specific date and time
+3.	For a given equipment in an aggregated format (hourly/day) between dates
+ The API provides information about geographical and the parametric values for all the critical parts of the equipment between the requested dates (As applicable) as a response.  If the request does not contain the date range, by default the raw telemetry data of last 24 hours will be shared. All the telemetry and its relevant data are extracted from the Geo Spatial System (GSS) of CNHi.
+Pictorial representation of the data flows below. 
+
+![image.png](/img/mdx_image/generalTelemetry/image-4ee4fada-8909-4e24-b929-eeb9b18c062e.png)
+
+Attached file documental.
+
+[DEP- API Setup Reference Guide -General Telemetry V1.5.docx](/mdx_attachments/generalTelemetry/DEP-%20API%20Setup%20Reference%20Guide%20-General%20Telemetry%20V1.5-8addff87-4063-49c3-8f6a-769fdaa7a662.docx)

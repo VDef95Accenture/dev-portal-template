@@ -1,0 +1,81 @@
+@import '../../styles/colors.scss';
+@import '../../styles/internals.scss';
+
+.contentContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+
+    .textContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        max-width: 500px;
+        margin-right: 75px;
+
+
+        .pageHeader {
+            font-size: 80px;
+            font-weight: 900;
+            color: $primary-red;
+        }
+    
+        .pageSubHeader {
+            font-size: 50px;
+            font-weight: 700;
+            color: $secondary-blue-grey;
+        }
+    
+        .pageText {
+            font-size: 20px;
+        }
+    }
+
+    .imageContent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0px;
+
+        .pageImage {
+            height: 300px;
+            width: 300px;
+            border-radius: 100%;
+        }
+    }
+}
+
+@media (max-width: $mobile-cutoff) {
+    .contentContainer {
+        flex-direction: column;
+
+        .textContent {
+            margin-right: 0px;
+            align-items: center;
+
+            .pageHeader {
+                font-size: 40px;
+            }
+
+            .pageSubHeader {
+                font-size: 24px;
+            }
+
+            .pageText {
+                font-size: 16px;
+                text-align: center;
+            }
+        }
+
+        .imageContent{
+            margin-bottom: 20px;
+
+            .pageImage {
+                height: 200px;
+                width: 200px;
+            }
+        }
+    }
+}

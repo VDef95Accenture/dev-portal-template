@@ -1,0 +1,31 @@
+---
+tags:
+  - DEP API - eWarranty
+  - Catalog api's external dep
+---
+
+## 	Overview
+
+Warranty Vehicle Lookup API is designed to allow the dealers to retrieve the Warranty information from CNH Industrial Warranty system for a given Vehicle Identification Number (VIN) on a real-time basis. The API provides information about the Repair history, PiP, and PPP, Vehicle description, End Customer description along with the Warranty data, for the selected Vehicle Identification Number (VIN). All the information presented as a response by this API is sourced from the SAP e-Warranty system. 
+Pictorial representation of the data flows below. 
+
+![image.png](/img/mdx_image/eWarranty/image-fb5b8953-a195-4052-a378-f955ec93cb86.png)
+ 
+## Pre-requisites to access the API
+
+- •	Dealer provides the DMS with a User ID for the Dealer Portal with eWarranty access. 
+- •	By providing eWarranty access via the Dealer Portal, the User ID should be set up in the ZWTY_DP_CUSPRMAP table associated with the Dealership complex SAP Ownership Group dealer code.
+- •	Each DMS provider needs to have a Subscription key assigned by CNHi team. DMS to reach out to CNHi point of contact for the Subscription key.
+- 4.	API setup
+- CNHi has built a data exchange platform (DEP), which provides the flexibility to the end users to request information in either of the following formats: 
+- •	REST API  
+- •	SOAP (legacy format already in use)
+
+The DEP takes care of the format transformations (as needed) to process the request and provide a response to the DMS system.
+DMS providers who already have the connection established to the SAP eWarranty system can continue to use the existing SOAP format. All such DMS providers are required to change the request end point URL alone in their systems (details in connection details section). The response format from the CNHi system will remain unchanged.
+New DMS’s who are building this interface are recommended to the use the REST API for simplicity. 
+
+
+Attached document 
+
+[DEP- API Setup Reference Guide -eWarranty V1.5.docx](/mdx_attachments/eWarranty/DEP-%20API%20Setup%20Reference%20Guide%20-eWarranty%20V1.5-cbf3eba9-8a3f-4370-9dae-8a493a458fdb.docx)

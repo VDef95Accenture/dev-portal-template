@@ -1,0 +1,28 @@
+---
+tags:
+  - DEP API - SRT
+  - Catalog api's external dep
+---
+
+## Overview
+SRT API is intended to expose details related to a SRT code, its description, timesheet, model, product line, region etc., which enables the DMS providers to have information on the rates, work units at the time of creating a flat rate work order repair/quote. A DMS provider can query the SRT data on a real time basis by providing the Vehicle Identification Number (VIN) or the Model Number. The API provides information that are available in Smart basket application today for the given equipment or model after filtering information that might not be useful for the dealers. All the SRT and its relevant data are extracted from the Smart Basket system of CNHi.
+Pictorial representation of the data flows below. 
+
+![image.png](/img/mdx_image/srt/image-3ce0ae9a-d991-4d7e-9a76-f0d92facec34.png)
+
+## Pre-requisites to access the API
+
+•	To request for the SRT details, the dealer should be registered and possess a user ID from CNHi dealer portal. 
+•	All the API setups require a basic http authorization header, which will require an API Subscription key
+•	CNHi may need to setup the access to retrieve data from Smart Basket application. This authentication mechanism will be determined and updated as needed	
+
+## API setup
+
+CNHi’ s has built a data exchange platform, which provides the flexibility to the end users to request information from CNHi system in the following format. 
+1.	REST API  
+CNHi’ s data exchange platform will take care of the format transformations (as needed) to process the request and response to the DMS system.
+DMS providers can access the CNHi’ s SRT system/data using a REST API format. The end point URL for the connection is listed in connection details section.  
+
+Attached Document
+
+[DEP- API Setup Reference Guide -SRT V1.0.docx](/mdx_attachments/srt/DEP-%20API%20Setup%20Reference%20Guide%20-SRT%20V1.0-4e301741-55d2-4dba-8928-642b3bce3a71.docx)

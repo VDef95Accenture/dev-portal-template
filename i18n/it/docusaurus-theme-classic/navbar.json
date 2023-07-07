@@ -1,0 +1,10 @@
+{
+  "item.label.Documentation": {
+    "message": "Documentazione",
+    "description": "Navbar item with label Documentation"
+  },
+  "item.label.Troubleshooting": {
+    "message": "Risoluzione dei problemi",
+    "description": "Navbar item with label Troubleshooting"
+  }
+}

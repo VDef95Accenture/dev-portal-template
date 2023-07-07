@@ -1,0 +1,73 @@
+@import '../../styles/colors.scss';
+
+.imageContent {
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.imageText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.imageSource {
+    max-width: 850px;
+}
+
+.minimizedView {
+    background-color: $secondary-blue-grey-light;
+    padding: 25px 5px 15px;
+    box-shadow: 0 4px 4px 0 $shadow-medium;
+    border-radius: 5px;
+}
+
+.isExpandedImageView {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+
+    .imageText {
+        color: $primary-white;
+        font-size: 20px;
+    }
+
+    .imageSource {
+        max-width: 100%;
+    }
+}
+
+.notExpandedImageView {
+    display: none;
+}
+
+[data-theme='dark'] {
+    .isExpandedImageView {
+        .imageText {
+            color: $primary-white;
+        }
+    }
+
+    .imageText {    
+        color: $primary-black;
+    }
+
+    .minimizedView {
+        background-color: $secondary-blue-grey-light;
+        box-shadow: 0 4px 4px 0 $shadow-medium-white;
+    }
+}
+  

@@ -1,0 +1,84 @@
+@import '../../styles/colors.scss';
+@import '../../styles/internals.scss';
+
+.cardContainer {
+  --ifm-link-color: var(--ifm-color-emphasis-800);
+  --ifm-link-hover-color: var(--ifm-color-emphasis-700);
+  --ifm-link-hover-decoration: none;
+
+  box-shadow: 0 1.5px 3px 0 $shadow-light;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  transition: all var(--ifm-transition-fast) ease;
+  transition-property: border, box-shadow;
+
+  &:hover {
+    box-shadow: 0 3px 6px 0 $shadow-medium;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.cardInfoContainer {
+  width: 85%;
+
+  .cardTitle {
+    font-size: 1.2rem;
+  }
+  
+  .cardDescription {
+    font-size: 0.8rem;
+  }
+}
+
+.cardGraphicContainer {
+  display: flex;
+  align-items: center;
+  width: 15%;
+  justify-content: right;
+
+  .iconContainer {
+    position: relative;
+    bottom: 30px;
+    right: 60px;
+
+    .iconContent {
+      z-index: 3;
+      display: flex;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+    }
+    
+    .iconFiller {
+      border-radius: 100%;
+      z-index: 2;
+      position: absolute;
+      left: 5px;
+      top: 5px;
+      height: 50px;
+      width: 50px;
+    }
+  }
+}
+
+[data-theme='dark'] {
+
+  .cardContainer {
+    box-shadow: 0 1.5px 3px 0 $shadow-light-white;
+  
+    &:hover {
+      box-shadow: 0 3px 6px 0 $shadow-medium-white;
+    }
+  }
+
+}
+
+@media screen and (max-width: $mobile-cutoff) {
+  .cardGraphicContainer {
+    display: none;
+  }
+}
+
+

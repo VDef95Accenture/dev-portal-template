@@ -1,0 +1,147 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* Imported style sheets */
+@import './colors.scss';
+@import './internals.scss';
+
+/* Google fonts, locally loaded. */
+@font-face {
+  font-family: 'Heebo';
+  src: url('@site/static/font/Heebo/Heebo-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Heebo';
+  src: url('@site/static/font/Heebo/Heebo-Medium.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Heebo';
+  src: url('@site/static/font/Heebo/Heebo-Bold.ttf');
+  font-weight: 900;
+}
+
+/* You can override the default Infima variables here. This is technically 'light' mode. */
+:root {
+  /* Themes */
+  --ifm-color-primary: #{$primary-black};
+  --ifm-color-primary-darkest: #{$infima-light-darkest};
+  --ifm-color-primary-darker: #{$infima-light-darker};
+  --ifm-color-primary-dark: #{$infima-light-dark};
+  --ifm-color-primary-light: #{$infima-light-light};
+  --ifm-color-primary-lighter: #{infima-light-lighter};
+  --ifm-color-primary-lightest: #{$infima-light-lightest};
+  --icon-color-light :#{$primary-red};
+  /* Code blocks */
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* Fonts */
+  --ifm-font-family-base: 'Heebo', 'sans-serif';
+  --ifm-font-family-monospace: 'Consolas';
+  /* Documents */
+  --ifm-heading-color: #{$primary-black};
+}
+
+/* For readability, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  /* Themes */
+  --ifm-color-primary: #{$primary-white};
+  --ifm-color-primary-darkest: #{$infima-dark-darkest};
+  --ifm-color-primary-darker: #{$infima-dark-darker};
+  --ifm-color-primary-dark: #{$infima-dark-dark};
+  --ifm-color-primary-light: #{$infima-dark-light};
+  --ifm-color-primary-lighter: #{infima-dark-lighter};
+  --ifm-color-primary-lightest: #{$infima-dark-lightest};
+  --icon-color-light :#{$primary-red};
+  /* Code blocks */
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  /* Fonts */
+  --ifm-font-family-base: 'Heebo', 'sans-serif';
+  --ifm-font-family-monospace: 'Consolas';
+  /* Documents */
+  --ifm-heading-color: #{$primary-white};
+
+  .navbar{
+    border-color: $primary-white;
+  }
+  
+}
+
+/* Global styles for layout components */
+.navbar {
+  height: 85px;
+  border-bottom: 5px solid $primary-black;
+
+  .navbar__logo {
+    height: 60px;
+    margin-left: 10px;
+  }
+
+  .navbar__link {
+    font-weight: 700;
+    padding: 4px 0 4px 0;
+    margin: 0 12px 0 12px;
+  }
+
+  .navbar__item:hover,
+  .navbar__link--active {
+    color: inherit;
+    border-bottom: 2px solid $primary-red;
+  }
+  .navbar-sidebar__brand{
+    height: auto !important;
+  }
+  .navbar-sidebar__items{
+    height: auto !important;
+  }
+  .dropdown:hover{
+    border-bottom: 0 !important;
+  }
+  .dropdown__link:hover, .dropdown__link--active:hover{
+    background-color: $primary-red !important;
+    color: $primary-white;
+  }
+  .dropdown__link--active{
+    color: $primary-red;
+    background-color: transparent !important;
+  }
+}
+
+.footer {
+  background-color: $border-gray;
+
+  .footer__links {
+    margin-bottom: 50px;
+  }
+
+  .footer__link-item:hover {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 2px solid $primary-red;
+}
+}
+
+@media screen and (max-width: $mobile-cutoff) {
+  .footer {
+    text-align: center;
+
+    .footer__links {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.docImgMain{
+  height: 300px !important;
+}
+
+@media screen and (max-width: 580px) {
+  .docImgMain{
+      height: auto !important;
+  }
+  
+}

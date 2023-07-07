@@ -1,0 +1,35 @@
+---
+tags:
+  - DEP API - Work Order
+  - Catalog api's external dep
+---
+
+import ThemeDependentImage from '@site/src/components/ThemeDependentImage/ThemeDependentImage.js';
+
+## Overview
+Workorder API is structured to capture the information about the critical attributes used in the work order at the time of creation in any DMS systems. As part of the other APIs like eWarranty, Faults, SRT, and Telemetry CNHi will be sharing the basic information required to create the Work Order.  Whereas, this API, along with the vehicle parameters details collected from CNHI, it will also include the additional details that are captured exclusively by the DMS in the Workorder like the details of the repair, technician, payment, customer etc. 
+DMS will transfer the details of all the Workorder to DEP, as and when it is ready to be interfaced in a REST format by invoking DEP’s API. 
+Pictorial representation of the data flows below. 
+
+![image.png](/img/mdx_image/workorder/image-fba010e9-c633-4ed5-a408-afad40faf019.png)
+ 
+The detailed data transfer in the whole Work Order creation sequence is depicted below for reference.  
+
+
+<ThemeDependentImage 
+image1="/img/mdx_image/workorder/image-97440fe8-a8e4-4fab-a3c0-c187bbbf9f18-light.png"
+image2="/img/mdx_image/workorder/image-97440fe8-a8e4-4fab-a3c0-c187bbbf9f18-dark.png" 
+style={{marginBottom: "1rem"}}
+/>
+
+
+•	To transfer the work order details, the dealer should be registered and possess a user ID from CNHi dealer portal.<br/>
+•	All the API setups require a basic http authorization header, which will require an API Subscription key
+## API setup
+
+CNHi’ s has built a data exchange platform, which provides the flexibility to the end users to request information from CNHi system in the following format. 
+1.	REST API  
+
+Attached Document
+
+[DEP- API Setup Reference Guide -Work Order V1.6.docx](/mdx_attachments/workorder/DEP-%20API%20Setup%20Reference%20Guide%20-Work%20Order%20V1.6-c74a01f9-41f3-43da-870f-479e732a67fd.docx)

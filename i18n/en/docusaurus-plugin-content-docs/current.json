@@ -1,0 +1,106 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.documentationSidebar.category.Getting Started": {
+    "message": "Getting Started",
+    "description": "The label for category Getting Started in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Product Guides": {
+    "message": "Product Guides",
+    "description": "The label for category Product Guides in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.API": {
+    "message": "API",
+    "description": "The label for category API in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.General Information": {
+    "message": "General Information",
+    "description": "The label for category General Information in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.doc.Introduction": {
+    "message": "Introduction",
+    "description": "The label for the doc item Introduction in sidebar documentationSidebar, linking to the doc documentation/introduction"
+  },
+  "sidebar.documentationSidebar.doc.Developer Portal": {
+    "message": "Developer Portal",
+    "description": "The label for the doc item Developer Portal in sidebar documentationSidebar, linking to the doc documentation/getting-started/developer-portal"
+  },
+  "sidebar.documentationSidebar.doc.Headers": {
+    "message": "Headers",
+    "description": "The label for the doc item Headers in sidebar documentationSidebar, linking to the doc documentation/product-guides/api/general-information/headers"
+  },
+  "sidebar.documentationSidebar.doc.HTTP Methods": {
+    "message": "HTTP Methods",
+    "description": "The label for the doc item HTTP Methods in sidebar documentationSidebar, linking to the doc documentation/product-guides/api/general-information/http-methods"
+  },
+  "sidebar.documentationSidebar.doc.Pagination": {
+    "message": "Pagination",
+    "description": "The label for the doc item Pagination in sidebar documentationSidebar, linking to the doc documentation/product-guides/api/general-information/pagination"
+  },
+  "sidebar.documentationSidebar.doc.Glossary": {
+    "message": "Glossary",
+    "description": "The label for the doc item Glossary in sidebar documentationSidebar, linking to the doc documentation/glossary"
+  },
+  "sidebar.troubleshootingSidebar.category.Common Questions": {
+    "message": "Common Questions",
+    "description": "The label for category Common Questions in sidebar troubleshootingSidebar"
+  },
+  "sidebar.troubleshootingSidebar.doc.Introduction": {
+    "message": "Introduction",
+    "description": "The label for the doc item Introduction in sidebar troubleshootingSidebar, linking to the doc troubleshooting/introduction"
+  },
+  "sidebar.troubleshootingSidebar.doc.General": {
+    "message": "General",
+    "description": "The label for the doc item General in sidebar troubleshootingSidebar, linking to the doc troubleshooting/common-questions/general"
+  },
+  "sidebar.troubleshootingSidebar.doc.Lorem": {
+    "message": "Lorem",
+    "description": "The label for the doc item Lorem in sidebar troubleshootingSidebar, linking to the doc troubleshooting/common-questions/lorem"
+  },
+  "sidebar.troubleshootingSidebar.doc.Support Tickets": {
+    "message": "Support Tickets",
+    "description": "The label for the doc item Support Tickets in sidebar troubleshootingSidebar, linking to the doc troubleshooting/support-tickets"
+  },
+  "sidebar.documentationSidebar.category.Catalog API'S External DEP": {
+    "message": "Catalog API'S External DEP",
+    "description": "The label for category Catalog API'S External DEP in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.doc.Common Terms": {
+    "message": "Common Terms",
+    "description": "The label for the doc item Common Terms in sidebar documentationSidebar, linking to the doc documentation/Common Terms"
+  },
+  "sidebar.documentationSidebar.doc.Page one": {
+    "message": "Page one",
+    "description": "The label for the doc item page one in sidebar documentationSidebar, linking to the doc documentation/getting-started/two"
+  },
+  "sidebar.documentationSidebar.doc.Page two": {
+    "message": "Page two",
+    "description": "The label for the doc item page two in sidebar documentationSidebar, linking to the doc documentation/getting-started/two"
+  },
+  "sidebar.documentationSidebar.doc.DEP API - Work Order": {
+    "message": "DEP API - Work Order",
+    "description": "The label for the doc item DEP API - Work Order in sidebar documentationSidebar, linking to the doc documentation/product-guides/api/catalog-api-external-dep/DEP API - Work Order"
+  },
+  "sidebar.documentationSidebar.doc.DEP API - SRT": {
+    "message": "DEP API - SRT",
+    "description": "The label for the doc item DEP API - SRT in sidebar documentationSidebar, linking to the doc documentation/product-guides/api/catalog-api-external-dep/DEP API - SRT"
+  },
+  "sidebar.documentationSidebar.doc.DEP API - Faults": {
+    "message": "DEP API - Faults",
+    "description": "The label for the doc item DEP API - Faults in sidebar documentationSidebar, linking to the doc documentation/product-guides/api/catalog-api-external-dep/DEP API - Faults"
+  },
+  "sidebar.documentationSidebar.doc.DEP API - eWarranty": {
+    "message": "DEP API - eWarranty",
+    "description": "The label for the doc item DEP API - eWarranty in sidebar documentationSidebar, linking to the doc documentation/product-guides/api/catalog-api-external-dep/DEP API - eWarranty"
+  },
+  "sidebar.documentationSidebar.doc.DEP External API - General Telemetry": {
+    "message": "DEP External API - General Telemetry",
+    "description": "The label for the doc item DEP External API - General Telemetry in sidebar documentationSidebar, linking to the doc documentation/product-guides/api/catalog-api-external-dep/DEP External API - General Telemetry"
+  },
+  "sidebar.troubleshootingSidebar.doc.Common Questions": {
+    "message": "Common Questions",
+    "description": "The label for the doc item Common Questions in sidebar troubleshootingSidebar, linking to the doc troubleshooting/common-questions/overview"
+  }
+}

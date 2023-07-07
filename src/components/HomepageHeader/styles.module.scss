@@ -1,0 +1,104 @@
+@import '../../styles/colors.scss';
+@import '../../styles/internals.scss';
+
+.bannerContainer {
+    padding: 0px 0px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background-color: $primary-red;
+}
+
+.desktopBanner {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 400px;
+
+    .bannerContent {
+        max-width: 1000px;
+       
+    }
+
+    .bannerImageContent{
+        opacity: 0.8;
+    }
+
+    .bannerTextContent {
+        position: absolute;
+        top: 0%;
+        margin-top: 60px;
+        margin-left: 50px;
+        z-index: 5;
+        color: $primary-red;
+    
+        .bannerHeader {
+            text-align: left;
+            font-weight: 900;
+            font-style: normal;
+            font-size: calc(30px + 0.5vw);
+            line-height: 50px;
+            padding-bottom: 1vw;  
+        }
+        
+        .bannerSubheader {
+            text-align: left;
+            font-style: normal;
+            font-weight: 700;
+            font-size: calc(20px + 0.25vw);
+            line-height: 35px;
+        }
+
+        .text {
+            color: white;
+        }
+    }
+}
+
+.mobileBanner {
+    display: none;
+    width: 100%;
+
+    .mobileTextContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+
+        .mobileTextHeader {
+            font-size: 30px;
+            font-weight: 700;
+        }
+    
+        .mobileTextSubheader {
+            font-size: 20px;
+            font-weight: 300;
+        }
+    
+        .text {
+            color: $primary-white;
+        }
+    }
+}
+  
+@media screen and (max-width: $mobile-cutoff) {
+    .bannerContainer {
+        padding: 15px;
+        background-color: $primary-red;
+    }
+
+    .mobileBanner {
+        display: initial;
+    }
+
+    .desktopBanner {
+        display: none;
+    }
+}
+
+[data-theme='dark'] {
+    .bannerContainer {
+        background-color:  $primary-red;
+    }
+}
